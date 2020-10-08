@@ -13,6 +13,15 @@ NPS park unit websites can have major influence on visitors and their planning f
 
 ### Approach
 
+The historical approach for this type of task is to have people manually look through websites for the related information. This approach can work for smaller tasks, but there are over 400 NPS park units with websites to monitor. This is likely too lofty a task for a consistent and timely results at the end.
 
+This Github repo contains Python code that will scrape all the NPS websites, score on the essential elements for visitors, and create a final Excel sheet with the final scores. 
 
 ### Analytical Methods
+
+Code can be found in two files:
+
+1. **VE_scraper_functions.py**: This file has functions for scraping the different "Planning your visit" parts of each NPS website and classifying/scoring the parks for the essential elements.  
+2. **NPS Site Scrape.ipynb**: This is a jupyter notebook where the park information is loaded and the functions are run, with quality checks.
+
+Note on the NPS site scraping: This function does not do a fully exhaustive scrape, but instead goes 2 links from the NPS park home page. An alternative method might involve going to every possible site with the scraper. However, as we are thinking that this is made for visitors, we want to make sure people can easily access the information, so 2 clicks seemed appropriate.
