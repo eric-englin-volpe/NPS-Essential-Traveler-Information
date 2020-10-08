@@ -35,7 +35,7 @@ def scrape_site(park):
             website_content.append(raw_content) #raw content added to list of all content
         except:
             #This means that the webpage doesn't exist
-            website_content.append("page doesn't exist")
+            pass
     driver.close() #close driver link at end of scrape
     dict = {'website page': website_list, 'content': website_content}  #create dataframe for park data
     park_data = pd.DataFrame(dict)
